@@ -1,0 +1,88 @@
+// Define theme colour scheme
+$theme-color-primary: #434E5E;
+$theme-text-color-primary: #434E5E;
+$theme-text-color-secondary: lighten($theme-text-color-primary, 10%);
+$theme-text-color-light: lighten($theme-text-color-primary, 40%);
+$theme-border-color:  lighten($theme-text-color-primary, 10%);
+$theme-divider-color: lighten($theme-text-color-primary, 10%);
+$theme-bg-light: #F7F8FA;
+$theme-bg-dark: $theme-text-color-primary;
+
+// Create variables to override the default value for variables used in the Bootstrap SCSS files.
+$theme-colors: (
+  "primary":  $theme-color-primary, 
+  "secondary":  $theme-text-color-secondary, 
+);
+
+@import "bootstrap/scss/bootstrap.scss";
+
+body {
+    font-family: 'Roboto', sans-serif;  
+    background: #f8f9fa;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #212529;
+    overflow-x: hidden;
+}
+
+.text-link {
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+        color: darken($theme-color-primary, 15%);
+    }
+}
+
+.resume-wrapper {
+    padding-top: 30px;
+    padding-bottom: 60px;
+	
+}
+
+.resume-wrapper-inner {
+	max-width: 1000px;
+}
+
+.resume-header {
+	background: $theme-color-primary;
+	color: rgba(256, 256, 256, 0.9);
+	height: 220px;
+
+    .profile-image {
+    width: 180px;
+    height: 220px;
+    }
+}
+
+.resume-social {
+	font-size: 0.875rem;
+
+	.fa-container {
+		font-size: 1rem;
+		display:inline-block;
+		width: 24px;
+		height: 24px;
+		@include border-radius(0.125rem);
+		background: white;
+		color: $theme-color-primary;
+	}
+
+}
+
+.resume-section-title {
+	font-size: 1.25rem;
+	position: relative;
+	color: $theme-color-primary;
+	
+	&:after {
+		content: "";
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		height: 1.5px;
+		background: lighten($theme-text-color-primary, 30%);
+	}
+}
+
