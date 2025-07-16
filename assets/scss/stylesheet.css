@@ -11419,10 +11419,20 @@ body {
   overflow-x: hidden;
 }
 
-.text-link {
+a {
+  color: #434E5E;
+}
+a:hover {
+  color: #232931;
+}
+a.no-text-decoration {
   text-decoration: none;
 }
-.text-link:hover {
+
+a.text-link {
+  text-decoration: none;
+}
+a.text-link:hover {
   text-decoration: underline;
   color: #232931;
 }
@@ -11436,6 +11446,16 @@ body {
   max-width: 1000px;
 }
 
+.resume-social .fa-container {
+  font-size: 1rem;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border-radius: 0.125rem;
+  background: white;
+  color: #434E5E;
+}
+
 .resume-header {
   background: #434E5E;
   color: rgba(255, 255, 255, 0.9);
@@ -11445,18 +11465,19 @@ body {
   width: 180px;
   height: 220px;
 }
-
-.resume-social {
-  font-size: 0.875rem;
+.resume-header .name {
+  font-size: 2.25rem;
+  letter-spacing: 0.175rem;
+  font-weight: 900;
 }
-.resume-social .fa-container {
-  font-size: 1rem;
-  display: inline-block;
-  width: 24px;
-  height: 24px;
-  border-radius: 0.125rem;
-  background: white;
-  color: #434E5E;
+.resume-header .title {
+  font-size: 1.5rem;
+}
+.resume-header a {
+  color: rgba(255, 255, 255, 0.6);
+}
+.resume-header a:hover {
+  color: white;
 }
 
 .resume-section-title {
@@ -11472,4 +11493,55 @@ body {
   width: 100%;
   height: 1.5px;
   background: #8d9aad;
+}
+
+.resume-section-content {
+  color: #58677c;
+}
+
+.resume-timeline {
+  padding-left: 2rem;
+}
+.resume-timeline:before {
+  content: "";
+  display: inline-block;
+  width: 3px;
+  height: 100%;
+  background: #aab4c3;
+  left: 6px;
+  top: 4px;
+  position: absolute;
+}
+
+.resume-timeline-item:before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: -32px;
+  top: 3px;
+  width: 15px;
+  height: 15px;
+  border: 4px solid #58677c;
+  background: white;
+  border-radius: 50%;
+}
+
+.resume-position-title {
+  font-size: 1.125rem;
+  color: #434E5E;
+}
+
+.resume-company-name {
+  color: #58677c;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.resume-position-time {
+  font-size: 0.875rem;
+  color: #aab4c3;
+}
+
+.resume-timeline-item-desc-heading {
+  font-size: 1rem;
 }/*# sourceMappingURL=stylesheet.css.map */
